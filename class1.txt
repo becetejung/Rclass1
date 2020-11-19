@@ -1,0 +1,65 @@
+> 
+> 
+> year <- 2020
+> year
+[1] 2020
+> name <- "R프로그래밍"
+> name
+[1] "R프로그래밍"
+> sports.name <- "basketball"
+> sports.number <- 11
+> sports.number
+[1] 11
+> names <- c("R프로그래밍", "Java", "VC++")
+> names
+[1] "R프로그래밍" "Java"        "VC++"       
+> names[1]
+[1] "R프로그래밍"
+> names[2]
+[1] "Java"
+> names[3]
+[1] "VC++"
+> res <- c(sports)
+에러: 객체 'sports'를 찾을 수 없습니다
+> value <- c(2,3,5)
+> res <- as.numeric(value) * 3
+> res
+[1]  6  9 15
+> animal <- c("멍멍이", "강아지", "강생이", "강아지")
+> nain <- as.factor(animal)
+> table(nain)
+nain
+강생이 강아지 멍멍이 
+     1      2      1 
+> mode( nain)
+[1] "numeric"
+> class( nain)
+[1] "factor"
+> oani <- factor( animal, levels =c("강아지", "멍멍이"), ordered = T
++ )
+> 
+> oain
+에러: 객체 'oain'를 찾을 수 없습니다
+> oani <- factor( animal, levels =c("강아지", "멍멍이"), ordered = T)
+> oani
+[1] 멍멍이 강아지 <NA>   강아지
+Levels: 강아지 < 멍멍이
+> par( mfrow = c(1,2))
+> plot(nain)
+> plot(oain)
+Error in plot(oain) : 객체 'oain'를 찾을 수 없습니다
+> plot(oani)
+> getwd()
+[1] "C:/Users/becet/OneDrive/문서"
+> 
+> setwd("c:/workspace/rwork")
+> getwd()
+[1] "c:/workspace/rwork"
+> write.csv(value, "value.csv")
+> data <- read.csv("value.csv", header = F)
+> data
+  V1 V2
+1 NA  x
+2  1  2
+3  2  3
+4  3  5
